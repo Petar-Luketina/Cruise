@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    {% block head %}{% endblock %}
+  </head>
+  <nav class="navbar navbar-light bg-light shadow-sm">
+    <a class="navbar-brand">Cardinal Cruise Implementation - Standard</a>
+  </nav>
+  <body>
+    {% block body %}{% endblock %}
+  </body>
+  <script type="text/javascript" src="{{url_for('static', filename='checkout.js')}}" ></script>
+</html>
