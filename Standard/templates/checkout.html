@@ -3,7 +3,8 @@
   Checkout Page
 {% endblock %}
 {% block head %}
-  <!-- Step 2: Include the Script -->
+<!-- <script src="https://songbird.cardinalcommerce.com/edge/v1/songbird.js"></script> -->
+<script src="https://songbirdstag.cardinalcommerce.com/cardinalcruise/v1/songbird.js"></script>
 {% endblock %}
 
 {% block body %}
@@ -23,5 +24,6 @@
     </div>
   </div>
 </div>
+<input type="hidden" id="JWTContainer" value="{{ context.jwt }}" />
 <!-- Step 7: BIN Detection -->
 {% endblock%}
