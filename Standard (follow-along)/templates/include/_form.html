@@ -1,0 +1,108 @@
+<div id="formContainer" class="card border mb-3" style="max-width: 13rem;">
+  <div class="card-header">Payment Fields</div>
+  <div class="card-body text-secondary">
+    <button id='showOrHide' type="button" class="btn btn-primary" onclick="showOrHide()">Show</button>
+    <div id="form" class="d-none mt-3">
+      <form>
+        <h5> Credit Card Information </h5>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="accountNumber">Credit Card</label>
+            <input type="text" class="form-control" id="accountNumber" value="0000-0000-0000-0000">
+          </div>
+          <div class="form-group col-md-2">
+            <label for="expirationDate">Expiration Date</label>
+            <input type="text" class="form-control" id="expirationDate" value="05/20">
+          </div>
+          <div class="form-group col-md-2">
+            <label for="cvvCode">CVV Code</label>
+            <input type="email" class="form-control" id="cvvCode" value="123">
+          </div>
+        </div>
+        <br />
+        <h5> Billing Information </h5>
+        <div class="form-row">
+          <div class="form-group col-md-2">
+            <label for="billingFirst">First Name</label>
+            <input type="text" class="form-control" id="billingFirst" value="John">
+          </div>
+            <div class="form-group col-md-2">
+              <label for="billingMiddle">Middle Name</label>
+              <input type="text" class="form-control" id="billingMiddle" value="John">
+            </div>
+          <div class="form-group col-md-3">
+            <label for="billingLast">Last Name</label>
+            <input type="text" class="form-control" id="billingLast" value="Doe">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="emailAddress1">eMail Address</label>
+            <input type="email" class="form-control" id="emailAddress1" value="j.doe@example.com">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="billingNumber">Phone Number</label>
+            <input type="tel" class="form-control" id="billingNumber" value="(440)-555-5555">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="billingAddress1">Address</label>
+            <input type="text" class="form-control" id="billingAddress1" value="1234 Main St">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="billingAddress2">Address 2 (Optional)</label>
+            <input type="text" class="form-control" id="billingAddress2" value="Apartment #3">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="billingCity">City</label>
+            <input type="text" class="form-control" id="billingCity" value="Cleveland">
+          </div>
+          <div class="form-group col-md-1">
+            <label for="billingState">State</label>
+            <input type="text" id="billingState" class="form-control" value="OH">
+          </div>
+          <div class="form-group col-md-2">
+            <label for="billingZip">Zip</label>
+            <input type="text" class="form-control" id="billingZip" value="44012">
+          </div>
+        </div>
+        <br />
+        <h5>Shipping Information</h5>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Same as Billing
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+<script type="text/javascript">
+  var toggleButton;
+  toggleButton = document.getElementById('showOrHide');
+
+  var formFields;
+  formFields = document.getElementById('form');
+
+  var formContainer
+  formContainer = document.getElementById('formContainer')
+
+  function showOrHide() {
+    formFields.classList.toggle("d-none");
+
+    if (toggleButton.innerHTML == 'Hide') {
+      toggleButton.innerHTML = 'Show';
+      formContainer.style.maxWidth = '13rem';
+    }
+    else {
+      toggleButton.innerHTML = 'Hide';
+      formContainer.style.maxWidth = '100vw';
+    }
+  }
+</script>
