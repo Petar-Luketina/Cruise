@@ -27,21 +27,20 @@ def checkout():
         'Payload': {
             'OrderDetails': {
                 'OrderNumber': 'Order: ' + rand_id[10:],
-                'Amount': amount.replace('.', ''), # 10000
+                'Amount': amount.replace('.', ''), # 100.00 to 10000
                 'CurrancyCode': '840',
             }
         },
         'ObjectifyPayload': True,
     }
-    #   > Pass to frontend
     jwt_ = jwt.encode(payload, apiKey)
 
     context = {
         'jwt': jwt_.decode('utf-8') # decodes from bytes to string
     }
-    print(context)
-    # Step 10: JWT Validation
+    #   > Pass to frontend
     return render_template('checkout.html', context=context)
+    # Step 10: JWT Validation
 
 if __name__ == '__main__':
     app.run(debug=True)
