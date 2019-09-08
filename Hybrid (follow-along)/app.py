@@ -1,12 +1,11 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
-# python app.py
 
 @app.route('/')
 def checkout():
     # Step 1: JWT Creation
-    #   > jwt.io
+    #   > jwt.io website
     #   > Pass to frontend
     # Step 8:  Create cmpi_lookup and send request
     # Step 9:  Code for the cmpi response
