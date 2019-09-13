@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}
+  Checkout Page
+{% endblock %}
+{% block head %}
+  <!-- Step 2: Include the Script -->
+  <!-- <script src="https://songbird.cardinalcommerce.com/edge/v1/songbird.js"></script> -->
+  <script src="https://songbirdstag.cardinalcommerce.com/cardinalcruise/v1/songbird.js"></script>
+{% endblock %}
+
+{% block body %}
+<div class="p-3">
+  <div class="card border mb-3" style="max-width: 13rem;">
+    <div class="card-header">Init</div>
+    <div class="card-body text-secondary">
+      <p class="card-text">Initialzed on page load</p>
+    </div>
+  </div>
+  {% include 'include/_form.html' %}
+  </div>
+  <div class="card border mb-3" style="max-width: 13rem;">
+    <div class="card-header">Start</div>
+    <div class="card-body text-secondary">
+      <button type="button" class="btn btn-success">Start</button>
+    </div>
+  </div>
+<input type="hidden" id="JWTContainer" value="{{ context.jwt }}" />
+<!-- Step 6: BIN Detection -->
+{% endblock%}
