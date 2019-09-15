@@ -9,6 +9,7 @@
 {% endblock %}
 
 {% block body %}
+<div id="amount" class="pl-3 pt-3">Amount: ${{ context.amount }}</div>
 <div class="p-3">
   <div class="card border mb-3" style="max-width: 13rem;">
     <div class="card-header">Init</div>
@@ -21,9 +22,9 @@
   <div class="card border mb-3" style="max-width: 13rem;">
     <div class="card-header">Start</div>
     <div class="card-body text-secondary">
-      <button type="button" class="btn btn-success">Start</button>
+      <button type="button" class="btn btn-success" onclick="startCCA()">Start</button>
     </div>
   </div>
 <input type="hidden" id="JWTContainer" value="{{ context.jwt }}" />
-<!-- Step 6: BIN Detection -->
+<input type="hidden" id="orderNumber" value="{{ context.orderNumber }}" />
 {% endblock%}

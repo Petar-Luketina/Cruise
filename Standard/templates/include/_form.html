@@ -7,8 +7,10 @@
         <h5> Credit Card Information </h5>
         <div class="form-row">
           <div class="form-group col-md-4">
-            <label for="accountNumber">Credit Card</label>
-            <input type="text" class="form-control" id="accountNumber" value="0000-0000-0000-0000">
+            <label for="creditCardNumber">Credit Card</label>
+            <!-- Step 6: BIN Detection -->
+            <input type="text" class="form-control" data-cardinal-field="AccountNumber" id="creditCardNumber" name="creditCardNumber" placeholder="0000-0000-0000-0000"/>
+            <!-- Added class="form-control" and placeholder to Cardinal BIN Detection-->
           </div>
           <div class="form-group col-md-2">
             <label for="expirationDate">Expiration Date</label>

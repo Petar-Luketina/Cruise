@@ -28,7 +28,7 @@ def checkout():
             'OrderDetails': {
                 'OrderNumber': 'Order: ' + rand_id[10:],
                 'Amount': amount.replace('.', ''), # 100.00 to 10000
-                'CurrancyCode': '840',
+                'CurrencyCode': '840',
             }
         },
         'ObjectifyPayload': True,
