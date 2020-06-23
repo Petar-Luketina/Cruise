@@ -12,7 +12,6 @@ Cardinal.on('payments.setupComplete', function(){
 Cardinal.on("payments.validated", function (data, jwt) {
     // Step 9.  Handing the CCA Response (from Step 4. Listen for Events)
   switch(data.ActionCode){
-
     case "SUCCESS":
     // Handle successful transaction, send JWT to backend to verify
     $.ajax({
