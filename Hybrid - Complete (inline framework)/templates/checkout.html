@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block title %}
+  Checkout Page
+{% endblock %}
+{% block head %}
+{% endblock %}
+
+{% block body %}
+  <div id='Cardinal-container' style=
+  "
+    z-index: 99;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 0 9px #ccc;
+    width: 530px;
+    margin-left: calc((100vw - 530px)/2);
+    position: absolute;
+    display: none;
+  "
+    >
+    <div style="background: rgba(0,0,0,.07);">
+      <div style=
+      " float: left;
+        width: 80%;
+        font-size: 30px;
+        padding: 35px;
+      "
+      >Verify Your Transaction</div>
+      <div style=
+      "
+        float: right;
+        width: 40px;
+        height: 40px;
+        background: rgba(255,0,0,.6);
+        font-size: 25px;
+        margin: 20px;
+        padding-left: 14px;
+        border-radius: 50%;
+        cursor: pointer;
+      "
+      onclick="document.getElementById('Cardinal-container').style.display='none'">x</div>
+    </div>
+    <div id="my-visible-wrapper" style=
+    "
+      text-align: center;
+      padding-top: 35px;
+      padding-bottom: 35px;
+    "
+    ></div>
+    <div width="300" height="300" id="my-hidden-wrapper"></div>
+  </div>
+<div class="p-3">
+  <div class="card border mb-3" style="max-width: 13rem;">
+    <div class="card-header">Init</div>
+    <div class="card-body text-secondary">
+      <p class="card-text">Initialzed on page load</p>
+    </div>
+  </div>
+  {% include 'include/_form.html' %}
+  </div>
+  <div class="card border mb-3" style="max-width: 13rem;">
+    <div class="card-header">Start</div>
+    <div class="card-body text-secondary">
+      <button type="button" class="btn btn-success" onclick="startCCA()">Start</button>
+    </div>
+  </div>
+<input type="hidden" id="JWTContainer" value="{{ context.jwt }}" />
+{% endblock%}

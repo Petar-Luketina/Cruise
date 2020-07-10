@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Step 2: Include the Script -->
+    <!-- <script src="https://songbird.cardinalcommerce.com/edge/v1/songbird.js"></script> -->
+    <script src="https://songbirdstag.cardinalcommerce.com/cardinalcruise/v1/songbird.js"></script>
+    {% block head %}{% endblock %}
+  </head>
+  <nav class="navbar navbar-light bg-light shadow-sm">
+    <a class="navbar-brand">Cardinal Cruise Implementation - Hybrid</a>
+  </nav>
+  <body>
+    {% block body %}{% endblock %}
+  </body>
+  <script type="text/javascript" src="{{url_for('static', filename='checkout.js')}}" ></script>
+  <script type="text/javascript" src="{{url_for('static', filename='inline_framework.js')}}" ></script>
+</html>
